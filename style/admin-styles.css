@@ -1,0 +1,110 @@
+#radio-preview .radio_container {
+    background-size: cover; /* Ajuste la taille de l'image de fond pour couvrir le conteneur */
+    background-position: center; /* Centre l'image de fond */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+    position: relative; /* Permet de positionner les éléments enfants en absolu si nécessaire */
+    border: 1px solid #ccc; /* Ajoute une bordure pour délimiter l'aperçu */
+    overflow: hidden; /* Cache tout débordement */
+    border-radius: 10px; /* Angles arrondis pour un look moderne */
+}
+
+#preview-play-button {
+	background-repeat: no-repeat;
+    cursor: not-allowed; /* Indique visuellement que le bouton n'est pas interactif */
+    opacity: 0.7; /* Rend le bouton légèrement transparent pour le style */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#preview-round {
+	inset: 50px !important;
+	background-repeat: no-repeat;
+    cursor: not-allowed; /* Indique visuellement que le bouton n'est pas interactif */
+    opacity: 0.7; /* Rend le bouton légèrement transparent pour le style */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#preview-pause-button {
+	background-repeat: no-repeat;
+    cursor: not-allowed; /* Indique visuellement que le bouton n'est pas interactif */
+    opacity: 0.7; /* Rend le bouton légèrement transparent pour le style */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#preview-play-button:hover {
+    opacity: 1; /* Full opacity on hover to suggest interactivity if needed */
+}
+
+#radio-preview {
+    background: #fff; /* Fond blanc pour l'aperçu */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Ombre légère pour donner de la profondeur */
+    overflow: hidden; /* S'assure que rien ne sort de ce conteneur */
+}
+
+#radio-preview h2 {
+    font-size: 1.2em; /* Taille du titre de l'aperçu */
+    color: #333; /* Couleur sombre pour le texte */
+    margin-top: 0; /* Réduit l'espace en haut si nécessaire */
+    text-align: center; /* Centre le texte */
+}
+
+/* Si vous voulez ajouter un effet de rotation au bouton play (même s'il n'est pas interactif) */
+@keyframes previewRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/*
+#radio-preview #preview-play-button {
+    animation: previewRotate 60s infinite linear; // Rotation infinie
+    animation-play-state: paused; // Par défaut, l'animation est en pause
+}
+*/
+#radio-preview #preview-round {
+    animation: previewRotate 60s infinite linear; /* Rotation infinie */
+    animation-play-state: paused; /* Par défaut, l'animation est en pause */
+}
+
+#radio-preview:hover #preview-round {
+    animation-play-state: running; /* L'animation démarre au survol */
+}
+
+.sr42-main-page {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.sr42-main-page h1 {
+    color: #333;
+}
+
+.sr42-main-page .shortcode-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sr42-main-page #shortcode {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.sr42-main-page #copy_shortcode {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sr42-main-page #success_message {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+}
